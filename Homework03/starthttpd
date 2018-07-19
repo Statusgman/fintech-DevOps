@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+HTTPD_PID="$(pgrep 'httpd')"
+
+if ! (( $? == 0 ))
+then
+  echo "$(date '+%d/%m/%Y %H:%M:%S') httpd was not running, starting..." >> /root/httpd_start.log
+  ./httpd &
+else
+  echo "Tiny httpd is already running! PID: $HTTPD_PID"
+  exit 1
+fi
+
+exit 0

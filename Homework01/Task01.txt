@@ -1,0 +1,140 @@
+Задание 1
+
+Канальный уровень
+
+Те, которые знаю или о которых слышал:
+1) IEEE 802.11 WiFi
+2) IEEE 802.16 WiMAX
+3) L2TP Layer 2 Tunneling Protocol
+4) PPP Point-to-Point Protocol
+5) PPTP Point-to-Point Tunneling Protocol
+6) ARP Протокол разрешения адреса
+Остальные:
+7) ARCNET　Attached Resource Computer NETwork
+8) ATM Asynchronous Transport Mode
+9) CDP Протокол обнаружения Cisco
+10) DCAP Data Link Switching Client Access Protocol
+11) Dynamic Trunking Protocol Динамический протокол группобразования
+12) Econet
+13) FDDI Волоконно-оптический интерфейс по распределенным данным
+14) Frame Relay
+15) Канальный уровень CCITT G.hn
+16) HDLC High-Level Data Link Control
+17) LocalTalk
+18) L2F Layer 2 Forwarding Protocol
+19) LAPD Процедуры доступа к соединению на D-канале
+20) LLDP Link Layer Discovery Protocol
+21) LLDP-MED Link Layer Discovery Protocol — Media Endpoint Discovery
+22) Q.710 Упрощенный Message Transfer Part
+23) NDP Протокол обнаружения соседей
+24) RPR IEEE 802.17 Resilient Packet Ring
+25) Shortest Path Bridging
+26) SLIP Serial Line Internet Protocol (устарел)
+27) StarLAN
+28) STP Spanning Tree Protocol
+29) Token ring — по сути является не протоколом, а топологией
+30) VTP VLAN Trunking Protocol
+31) ATM Asynchronous Transfer Mode
+32) Frame relay, упрощенная версия X.25
+33) MPLS Multi-protocol label switching
+34) RARP Протокол разрешения обратного адреса
+35) MTP Message Transfer Part
+36) NSP Network Service Part
+
+Сетевой уровень
+
+Те, которые знаю или о которых слышал:
+1) ARP Протокол разрешения адреса
+2) ICMP Internet Control Message Protocol
+3) IGMP Internet Group Management Protocol
+4) IPv4 Internet Protocol version 4
+5) IPv6 Internet Protocol version 6
+6) IPsec Internet Protocol Security
+Остальные:
+7) ATM Asynchronous Transfer Mode
+8) Frame relay, упрощенная версия X.25
+9) MPLS Multi-protocol label switching
+10) X.25
+11) RARP Протокол разрешения обратного адреса
+12) MTP Message Transfer Part
+13) NSP Network Service Part
+14) CLNP Сетевой протокол без установки соединения
+15) EGP протокол внешнего шлюза (устарел)
+16) EIGRP Enhanced Interior Gateway Routing Protocol
+17) IGRP Interior Gateway Routing Protocol
+18) IPX Internetwork Packet Exchange
+19) SCCP Signalling Connection Control Part
+20) AppleTalk DDP
+21) IS-IS Intermediate System-to-Intermediate System
+22) OSPF Open Shortest Path First
+23) BGP Border Gateway Protocol
+24) RIP Routing Information Protocol
+25) IRDP: Реализация RFC 1256
+26) Gateway Discovery Protocol (GDP) — протокол, разработанный Cisco, схожий с IRDP
+
+Транспортный уровень
+
+Те, которые знаю или о которых слышал:
+1) GRE Generic Routing Encapsulation для туннелирования
+2) TCP Transmission Control Protocol
+3) UDP User Datagram Protocol
+Остальные:
+4) Xerox Network Systems
+5) AH Аутентификационный заголовок по IP или IPSec
+6) ESP Encapsulating Security Payload over IP or IPSec
+7) IL Первоначально разработан как транспортный уровень для 9P
+8) SCTP Stream Control Transmission Protocol
+9) Sinec H1 для удаленного контроля
+10) SPX Sequenced Packet Exchange
+
+Прикладной уровень
+
+Те, которые знаю или о которых слышал:
+1) AFP, Apple Filing Protocol
+2) BitTorrent — peer-to-peer-протокол обмена файлами
+3) DNS — система доменных имён
+4) DHCP, Dynamic Host Configuration Protocol
+5) FTP — протокол передачи файлов
+6) HTTP, Hypertext Transfer Protocol
+7) IRC — протокол для чата
+8) XMPP — протокол мгновенного обмена сообщениями
+9) LDAP Lightweight Directory Access Protocol
+10) MIME, Multipurpose Internet Mail Extensions
+11) NetBIOS — протокол общего пользования файлами и разрешения имен — основа обмена файлами в Windows.
+12) NTP — сетевой протокол времени
+13) POP3 — почтовый протокол версии 3
+14) RADIUS — протокол аутентификации, авторизации и работы с аккаунтами
+15) rsync — протокол передачи файлов для резервного копирования, копирования и зеркалирования
+16) SSH, Secure Shell
+17) SMTP, Simple Mail Transfer Protocol
+18) SOAP, Simple Object Access Protocol
+19) Telnet — протокол удаленного доступа к терминалу
+20) WebDAV, Web Distributed Authoring and Versioning
+Остальные:
+21) ADC — peer-to-peer-протокол обмена файлами
+22) BACnet, Building Automation and Control Network protocol
+23) BOOTP, Bootstrap Protocol
+24) DIAMETER — протокол аутентификации, авторизации и работы с аккаунтами
+25) DICOM содержит определение сетевого протокола
+26) DICT — словарный протокол
+27) ED2K — peer-to-peer-протокол обмена файлами
+28) Finger — протокол, возвращающий информацию о пользователях на удалённом компьютере
+29) Gnutella — peer-to-peer-протокол скачивания файлов
+30) Gopher — иерархический протокол на основе гиперссылок
+31) ISUP, ISDN User Part
+32) LDAP Lightweight Directory Access Protocol
+33) MSNP, Microsoft Notification Protocol (используется в Windows Live Messenger)
+34) MAP, Mobile Application Part
+35) NNTP — сетевой протокол передачи новостей
+36) NTCIP, National Transportation Communications for Intelligent Transportation System Protocol
+37) Rlogin — протокол удаленного входа в UNIX
+38) RTP, Real-time Transport Protocol
+39) RTSP, Real-time Transport Streaming Protocol
+40) SISNAPI, Siebel Internet Session Network API
+41) SIP, Session Initiation Protocol, сигнальный протокол
+42) SNMP, Simple Network Management Protocol
+43) STUN, Session Traversal Utilities for NAT
+44) TUP, Telephone User Part
+45) TCAP, Transaction Capabilities Application Part
+46) TFTP, Trivial File Transfer Protocol, простой протокол передачи файлов
+47) DSM CC Digital Storage Media Command and Control
