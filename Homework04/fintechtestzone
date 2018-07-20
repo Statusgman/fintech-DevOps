@@ -1,0 +1,15 @@
+$TTL 14400
+@	IN	SOA     local.fintechtestzone.  admin.fintechtestzone. (
+        2018071919	; Serial
+        10800           ; Refresh
+        3600            ; Retry
+        604800          ; Expire
+        604800          ; Negative Cache TTL
+)
+
+@	IN	NS	s-XX.fintech
+
+@	IN	A	127.0.0.1
+        IN	TXT     "May the Force be with you!"
+
+local   IN	A	127.0.0.1
