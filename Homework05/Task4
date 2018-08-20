@@ -1,0 +1,70 @@
+#### Задание 4 *
+
+#### (Не обязательное, но полезное) Опишите коротко все команды, которые вы выполняли в процессе подготовки д/з.
+
+Создали директорию
+mkdir -p /opt/webcode/
+Скопировали директорию рекурсивно
+cp -R /root/homework/materials/class05/src/former /opt/webcode
+
+
+#### Опишите коротко все опции uwsgi, которые задавались при запуске приложения.
+uwsgi
+--plugins=python # загрузить плагин uwsgi
+--http-socket=0.0.0.0:80 # привязаться к UNIX/TCP сокету используя HTTP и порт 80
+--wsgi-file /opt/webcode/former/process/webrunner.py # Файл со скриптом
+--static-map /form=/opt/webcode/former/form/index.html # Мап пути к файлу при запросе к реальному файлу
+--processes=5 # максимальное число процессов
+--master # включить мастер-процесс
+--pidfile=/tmp/formdig.pid # создать пидфайл
+--vacuum # попытаться удалить все созданные файлы/сокеты
+--max-requests=5000 # перезапустить после 5000 соединений
+
+#### Опишите коротко все конфигурационные опции из конфиг. файла former.ini.
+[program:former]
+command=uwsgi
+    --plugins=python
+    --http-socket=0.0.0.0:80
+    --wsgi-file /opt/webcode/former/process/webrunner.py
+    --static-map /form=/opt/webcode/former/form/index.html
+    --processes=5
+    --master
+    --pidfile=/tmp/former.pid
+    --vacuum
+    --max-requests=5000
+stopsignal=QUIT # сигнал, используемый, чтобы остановить программу
+autostart=true # запускать программу при запуске supervisord
+startretries=10 # количество попыток перезапуска программы перед переводом в статус FATAL
+startsecs=0 # программа будет считаться запущенной сразу после запуска
+stopwaitsecs=10 # Количество секунд ожидания перед тем как ОС пошлет SIGCHLD супервизору после того, как программе пошлют сигнал завершения.
+stopasgroup=true # если true - послать сигнал остановки всем процессам в группе
+
+stdout_logfile=/var/log/webapps/former_stdout.log # сохранить стандартный вывод процесса в куазанный файл
+stdout_logfile_maxbytes=60MB # Максимальный размер файла, если больше - начнет перезаписываться
+stdout_logfile_backups=4 # Количество дублирующих фалов (когда один заканчивается, начинается запись в другой, при достижении количества, старый файл перетирается)
+stdout_capture_maxbytes=4MB # Макс. количество байт записываемых FIFO, когда используется stdout capture mode
+
+stderr_logfile=/var/log/webapps/former_stderr.log # сохранить стандартный вывод ошибок процесса в куазанный файл
+stderr_logfile_maxbytes=60MB # Максимальный размер файла, если больше - начнет перезаписываться
+stderr_logfile_backups=4 # Количество дублирующих фалов (когда один заканчивается, начинается запись в другой, при достижении количества, старый файл перетирается)
+stderr_capture_maxbytes=4MB # Макс. количество байт записываемых FIFO, когда используется stderr capture mode
+
+#### Опишите коротко, что делает каждая строчка кода webrunner.py.
+
+#!/usr/bin/python # шибэнг
+
+from cgi import parse_qs # импорт подмодуля parse_qs из пакета cgi
+# parse_qs - разбивает url на компоненты
+
+def application(env, start_response): # объявление функции
+    start_response('200 OK', [('Content-Type','text/plain')]) # вызов замыкания start_response
+
+    wsgi_content = env["wsgi.input"].read(0) # вытаскиваем из словаря с переменными окружения тело (body) HTTP запроса - wsgi параметр
+    request_uri_content = env["REQUEST_URI"] # вытаскиваем из словаря URI - cgi параметр
+    request_method_content = env["REQUEST_METHOD"] # вытаскиваем из словаря метод запроса - cgi параметр
+    d = parse_qs(wsgi_content) # не понял зачем тут эта строка - результат не используется, но сама функция разбивает URL на компоненты
+
+    # Возвращаем тело http ответа (string iteratable)
+    return ["Method: " + request_method_content + "\n" +
+        "Get content: " + request_uri_content + "\n" +
+        "Post content: " + wsgi_content + "\n"]

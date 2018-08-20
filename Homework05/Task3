@@ -1,0 +1,7 @@
+Method: POST
+Get content: /process
+Post content: Name=Ilya&Age=26
+
+Method: GET
+Get content: /process?Name=Ilya&Age=26
+Post content:

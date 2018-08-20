@@ -1,0 +1,2 @@
+uwsgi запущен строкой
+[user39@e-9 src]$ sudo uwsgi --plugins=python --http-socket=0.0.0.0:80 --wsgi-file /opt/webcode/former/process/webrunner.py --static-map /form=/opt/webcode/former/form/index.html --processes=5 --master --pidfile=/tmp/formdig.pid --vacuum --max-requests=5000
